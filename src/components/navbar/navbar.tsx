@@ -1,38 +1,48 @@
-import { Box, CssBaseline, AppBar, Toolbar, Typography, Button, Drawer } from '@mui/material';
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+import { Box, CssBaseline, AppBar, Toolbar, Typography, Button, Drawer, useTheme, useMediaQuery } from '@mui/material';
+
 import logomobile from '../../assets/img/logomobile.png';
 
-const navItems = ['Serviços', 'Agendamento', 'Contato'];
+import SwipeableTemporaryDrawer from '../menu-lateral/MenuLateral';
+
+
+const navItems = ['Serviços', 'Agendamento', 'Contato', 'Portfólio'];
 
 function Navbar() {
+  const theme = useTheme();
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <Box height='16vh' sx={{ display: 'flex' }}>
+    <Box height={theme.spacing(smDown ? 12 : mdDown ? 8 : 16)} sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ bgcolor: 'black' }}>
         <Toolbar>
-          <Typography
-            variant="h1"
+          <Box
             component="div"
-            sx={{ flexGrow: 0.3, display: { xs: 'none', sm: 'block' } }}
+            width={theme.spacing(25)}
+            sx={{ flexGrow: (smDown ? 0.7 : 0.5) }}
           >
             <img className="w-80" src={logomobile} />
-          </Typography>
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <div className='gap-10 flex'>
               {navItems.map((item) => (
                 <Button
-                  size="large" key={item} sx={{ color: '#F2DAC2' }}>
-                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  key={item} sx={{ color: '#F2DAC2' }}>
+                  <Typography variant={smDown ? 'subtitle2' : mdDown ? 'subtitle1' : 'body1'} component="div" sx={{ flexGrow: 1 }}>
                     {item}
                   </Typography>
                 </Button>
               ))}
             </div>
           </Box>
+
+          <SwipeableTemporaryDrawer />
         </Toolbar>
       </AppBar>
       <Box component="nav">
@@ -50,5 +60,6 @@ function Navbar() {
       </Box>
     </Box >
   );
+
 }
 export default Navbar;
