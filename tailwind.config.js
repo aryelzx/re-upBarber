@@ -6,7 +6,12 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'karantina': ['Karantina', 'cursive'],
+      'inter': ['Inter', 'sans-serif']
   },
+
   plugins: [],
 }
 
+}

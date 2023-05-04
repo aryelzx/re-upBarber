@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { SwipeableDrawer, Button, Box, useTheme, useMediaQuery, List, ListItem, ListItemButton, ListItemText, ListItemIcon } from '@mui/material';
+import { SwipeableDrawer, Button, Box, useTheme, useMediaQuery, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import DoubleArrowRoundedIcon from '@mui/icons-material/DoubleArrowRounded';
+import '@fontsource/roboto/700.css';
 type Anchor = 'right';
 
 export default function SwipeableTemporaryDrawer() {
@@ -30,20 +31,21 @@ export default function SwipeableTemporaryDrawer() {
 
   const list = (anchor: Anchor) => (
     <Box
-      sx={{ width: anchor === 'right' || anchor === 'right' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'right' || anchor === 'right' ? 'auto' : 250, backgroundColor: 'black', height: '100vh' }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+
     >
-      <List>
+      <List >
         {/* add rotas aqui */}
         {['Serviços', 'Agentamento', 'Contato', 'Portfólio'].map((text) => (
-          <ListItem key={text} disablePadding >
+          <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {/* add icones aqui */}
+                <DoubleArrowRoundedIcon sx={{ color: '#977656' }} />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} sx={{ color: 'white' }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,7 +59,7 @@ export default function SwipeableTemporaryDrawer() {
         <React.Fragment key={anchor}>
           {smDown && (
             <Button onClick={toggleDrawer(anchor, true)}>
-              <MenuIcon />
+              <MenuIcon sx={{ color: '#977656' }} />
             </Button>
           )}
           <SwipeableDrawer

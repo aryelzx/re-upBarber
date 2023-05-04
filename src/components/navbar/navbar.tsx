@@ -18,14 +18,16 @@ function Navbar() {
   const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box height={theme.spacing(smDown ? 12 : mdDown ? 8 : 16)} sx={{ display: 'flex' }}>
+    <Box height={theme.spacing(0)} sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ bgcolor: 'black' }}>
-        <Toolbar>
+      <AppBar component="nav" sx={{
+        bgcolor: (smDown ? 'black' : mdDown ? 'black' : 'transparent'), height: '10%', paddingTop: '1rem', boxShadow: 'none'
+      }}>
+        < Toolbar >
           <Box
             component="div"
-            width={theme.spacing(25)}
-            sx={{ flexGrow: (smDown ? 0.7 : 0.5) }}
+            width={theme.spacing(22)}
+            sx={{ flexGrow: (smDown ? 0.7 : 0.5), padding: '0.5rem' }}
           >
             <img className="w-80" src={logomobile} />
           </Box>
@@ -44,7 +46,7 @@ function Navbar() {
 
           <SwipeableTemporaryDrawer />
         </Toolbar>
-      </AppBar>
+      </AppBar >
       <Box component="nav">
         <Drawer
           variant="temporary"
