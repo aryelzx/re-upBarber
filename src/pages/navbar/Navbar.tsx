@@ -27,10 +27,12 @@ function Navbar() {
             width={theme.spacing(22)}
             sx={{ flexGrow: (smDown ? 0.7 : 0.5), padding: '0.5rem' }}
           >
-            <img className="w-80" src={logomobile} />
+            {smDown ? <img className="relative" src={logomobile} /> :
+              <img className="w-5/6 top-2 relative " src={logomobile} />
+            }
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <div className='gap-10 flex'>
+            <div className='gap-10  flex'>
               {navItems.map((item) => (
                 <Button
                   key={item}

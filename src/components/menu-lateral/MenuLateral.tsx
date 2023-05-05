@@ -45,7 +45,7 @@ export default function SwipeableTemporaryDrawer() {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <DoubleArrowRoundedIcon sx={{ color: '#977656' }} />
+                <DoubleArrowRoundedIcon fontSize="large" sx={{ color: '#977656' }} />
               </ListItemIcon>
               <RouterLink to={`/${text.toLowerCase()}`} style={{ textDecoration: 'opacity: 0.8' }}>
                 <ListItemText primary={text} sx={{ color: 'white' }} />
@@ -63,7 +63,7 @@ export default function SwipeableTemporaryDrawer() {
         <React.Fragment key={anchor}>
           {smDown && (
             <Button onClick={toggleDrawer(anchor, true)}>
-              <MenuIcon sx={{ color: '#977656' }} />
+              <MenuIcon fontSize='large' sx={{ color: '#977656', position: 'relative', left: '40px' }} />
             </Button>
           )}
           <SwipeableDrawer
