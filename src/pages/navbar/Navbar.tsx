@@ -2,15 +2,13 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
 import { Box, CssBaseline, AppBar, Toolbar, Typography, Button, Drawer, useTheme, useMediaQuery } from '@mui/material';
-
+import { Link as RouterLink } from 'react-router-dom';
 import logomobile from '../../assets/img/logomobile.png';
+import SwipeableTemporaryDrawer from '../../components/menu-lateral/MenuLateral';
 
-import SwipeableTemporaryDrawer from '../menu-lateral/MenuLateral';
 
-
-const navItems = ['Serviços', 'Agendamento', 'Contato', 'Portfólio'];
+const navItems = ['home', 'servicos', 'agendamento', 'contato'];
 
 function Navbar() {
   const theme = useTheme();
@@ -35,9 +33,12 @@ function Navbar() {
             <div className='gap-10 flex'>
               {navItems.map((item) => (
                 <Button
-                  key={item} sx={{ color: '#F2DAC2' }}>
+                  key={item}
+                  sx={{ color: '#F2DAC2' }}>
                   <Typography variant={smDown ? 'subtitle2' : mdDown ? 'subtitle1' : 'body1'} component="div" sx={{ flexGrow: 1 }}>
-                    {item}
+                    <RouterLink to={`/${item.toLowerCase()}`} style={{ textDecoration: 'opacity: 0.8' }}>
+                      {item}
+                    </RouterLink>
                   </Typography>
                 </Button>
               ))}

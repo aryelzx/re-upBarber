@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { SwipeableDrawer, Button, Box, useTheme, useMediaQuery, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DoubleArrowRoundedIcon from '@mui/icons-material/DoubleArrowRounded';
 import '@fontsource/roboto/700.css';
+
 type Anchor = 'right';
 
 export default function SwipeableTemporaryDrawer() {
@@ -39,13 +41,15 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List >
         {/* add rotas aqui */}
-        {['Serviços', 'Agentamento', 'Contato', 'Portfólio'].map((text) => (
+        {['Home', 'Servicos', 'Agentamento', 'Contato', 'Portfolio'].map((text) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <DoubleArrowRoundedIcon sx={{ color: '#977656' }} />
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ color: 'white' }} />
+              <RouterLink to={`/${text.toLowerCase()}`} style={{ textDecoration: 'opacity: 0.8' }}>
+                <ListItemText primary={text} sx={{ color: 'white' }} />
+              </RouterLink>
             </ListItemButton>
           </ListItem>
         ))}

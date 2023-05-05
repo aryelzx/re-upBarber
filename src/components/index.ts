@@ -1,3 +1,3 @@
-export * from './navbar/navbar'
-export * from './body/body'
+export * from '../pages/navbar/navbar'
+export * from '../pages/body/body'
 export * from './menu-lateral/MenuLateral'
