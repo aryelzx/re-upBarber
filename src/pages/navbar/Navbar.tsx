@@ -34,15 +34,15 @@ function Navbar() {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <div className='gap-10  flex'>
               {navItems.map((item) => (
-                <Button
-                  key={item}
-                  sx={{ color: '#F2DAC2' }}>
-                  <Typography variant={smDown ? 'subtitle2' : mdDown ? 'subtitle1' : 'body1'} component="div" sx={{ flexGrow: 1 }}>
-                    <RouterLink to={`/${item.toLowerCase()}`} style={{ textDecoration: 'opacity: 0.8' }}>
+                <RouterLink to={`/${item.toLowerCase()}`} style={{ textDecoration: 'opacity: 0.8' }}>
+                  <Button
+                    key={item}
+                    sx={{ color: '#F2DAC2' }}>
+                    <Typography variant={smDown ? 'subtitle2' : mdDown ? 'subtitle1' : 'body1'} component="div" sx={{ flexGrow: 1 }}>
                       {item}
-                    </RouterLink>
-                  </Typography>
-                </Button>
+                    </Typography>
+                  </Button>
+                </RouterLink>
               ))}
             </div>
           </Box>

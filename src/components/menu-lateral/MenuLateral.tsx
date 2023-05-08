@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { SwipeableDrawer, Button, Box, useTheme, useMediaQuery, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Typography } from '@mui/material';
+import { SwipeableDrawer, Button, Box, useTheme, useMediaQuery, List, ListItem, ListItemButton, ListItemText, ListItemIcon } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DoubleArrowRoundedIcon from '@mui/icons-material/DoubleArrowRounded';
 import '@fontsource/roboto/700.css';
