@@ -1,8 +1,8 @@
-import { Box, Link, useTheme, useMediaQuery } from '@mui/material'
+import { Box, useTheme, useMediaQuery } from '@mui/material'
 
-import bgimgmobile from '../../assets/img/bgmobile.png'
+import bgimgmobile from '../../assets/img/backgroundsIcons/bgmobile.png'
 import Background from '../../components/Background';
-import wppIcon from '../../assets/img/wppicon.png'
+import wppIcon from '../../assets/img/backgroundsIcons/wppicon.png'
 
 function Body() {
   const theme = useTheme();

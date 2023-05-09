@@ -4,7 +4,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Box, CssBaseline, AppBar, Toolbar, Typography, Button, Drawer, useTheme, useMediaQuery } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import logomobile from '../../assets/img/logomobile.png';
+import logomobile from '../../assets/img/backgroundsIcons/logomobile.png';
 import SwipeableTemporaryDrawer from '../../components/menu-lateral/MenuLateral';
 
 

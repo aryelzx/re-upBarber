@@ -1,4 +1,4 @@
-import bgimg from '../assets/img/bg-image.png'
+import bgimg from '../assets/img/backgroundsIcons/bg-image.png'
 import { memo } from 'react'
 
 // eslint-disable-next-line react-refresh/only-export-components
