@@ -7,7 +7,7 @@ import '@fontsource/roboto/700.css';
 
 type Anchor = 'right';
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer(): JSX.Element {
 
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));

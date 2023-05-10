@@ -4,7 +4,7 @@ import Servicos from "./routes/Servicos"
 import Contato from "./routes/Contato"
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <Router>

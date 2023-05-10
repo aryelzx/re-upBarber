@@ -2,11 +2,9 @@ import React from 'react'
 import { Box, Modal, useTheme, useMediaQuery } from '@mui/material';
 import CardServices from "./CardServices";
 
-function ModalCard() {
+function ModalCard(): JSX.Element {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-  const mdDown = useMediaQuery(theme.breakpoints.down('md'));
-  const lgDown = useMediaQuery(theme.breakpoints.down('lg'));
 
   const rootRef = React.useRef<HTMLDivElement>(null);
   return (

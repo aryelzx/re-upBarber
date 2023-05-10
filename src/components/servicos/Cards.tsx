@@ -3,10 +3,9 @@ import americano1 from '../../assets/img/servicos/americano1.jpg'
 import dojaca from '../../assets/img/servicos/dojaca2.jpeg'
 import moicano from '../../assets/img/servicos/moicano1.jpg'
 
-function Cards() {
+function Cards(): JSX.Element {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-  const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <>

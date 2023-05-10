@@ -1,7 +1,7 @@
 import { useMediaQuery, useTheme } from '@mui/material';
 import Cards from './Cards';
 
-function CardServices() {
+function CardServices(): JSX.Element {
 
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
