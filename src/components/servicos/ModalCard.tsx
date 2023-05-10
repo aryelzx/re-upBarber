@@ -1,24 +1,35 @@
 import React from 'react'
-import { Box, Modal } from '@mui/material';
+import { Box, Modal, useTheme, useMediaQuery } from '@mui/material';
 import CardServices from "./CardServices";
 
 function ModalCard() {
+  const theme = useTheme();
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'));
+  const lgDown = useMediaQuery(theme.breakpoints.down('lg'));
+
   const rootRef = React.useRef<HTMLDivElement>(null);
   return (
     <div>
+
       <Box
         sx={{
-          height: 615,
-          marginTop: 10,
-          flexGrow: 1,
-          minWidth: 300,
-          transform: 'translateZ(0)',
-          '@media all and (-ms-high-contrast: none)': {
-            display: 'none',
-          },
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: smDown ? 'auto' : '80vh',
+          width: '90vw',
+          overflow: 'hidden',
+          position: 'absolute',
+          top: smDown ? '0' : '15vh',
+          left: '4.5%',
+          borderRadius: '10px',
+          backgroundColor: smDown ? 'none' : 'rgba(208, 177, 138, 0.3)',
+          backdropFilter: 'blur(4px)',
         }}
         ref={rootRef}
       >
+
         <Modal
           disablePortal
           disableEnforceFocus
@@ -28,11 +39,8 @@ function ModalCard() {
           aria-describedby="server-modal-description"
           sx={{
             display: 'flex',
-            flexDirection: 'row',
-            top: 10,
-            p: 1,
-            alignItems: 'center',
             justifyContent: 'center',
+            position: 'relative',
 
           }}
           container={() => rootRef.current}
@@ -40,7 +48,7 @@ function ModalCard() {
           <CardServices />
         </Modal>
       </Box >
-    </div>
+    </div >
   )
 }
 

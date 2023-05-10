@@ -19,7 +19,7 @@ function Navbar() {
     <Box height={theme.spacing(0)} sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav" sx={{
-        bgcolor: (smDown ? 'black' : mdDown ? 'black' : 'transparent'), height: '10%', paddingTop: '1rem', boxShadow: 'none'
+        bgcolor: (smDown ? 'black' : mdDown ? 'black' : 'transparent'), height: (!smDown ? '10%' : '15%'), paddingTop: '1rem', boxShadow: 'none'
       }}>
         < Toolbar >
           <Box
