@@ -17,7 +17,7 @@ function Background(): JSX.Element {
   }
 
   if (smDown && mdDown) {
-    styleProps.height = '250vh';
+    styleProps.height = '300%';
   }
 
   return (

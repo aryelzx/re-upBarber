@@ -13,7 +13,7 @@ function App(): JSX.Element {
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/home" element={<Body />} />
-          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/serviços" element={<Servicos />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<Errorpage />} />
         </Routes>

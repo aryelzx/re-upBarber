@@ -10,7 +10,7 @@ function CardServices(): JSX.Element {
   return (
     <>
       {!smDown && (
-        <div className='grid grid-flow-col space-x-10 relative '>
+        <div className='grid grid-flow-col space-x-14 relative '>
           <Cards />
         </div>
       )

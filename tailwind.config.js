@@ -8,6 +8,7 @@ export default {
     extend: {},
     fontFamily: {
       'karantina': ['Karantina', 'cursive'],
+      'poppins' : ['Poppins', 'sans-serif'],
       'inter': ['Inter', 'sans-serif']
   },
 

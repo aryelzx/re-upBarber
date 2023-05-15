@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Modal, useTheme, useMediaQuery } from '@mui/material';
-import CardServices from "./CardServices";
+import PricingTable from './PricingTable';
 
 function ModalCard(): JSX.Element {
   const theme = useTheme();
@@ -43,7 +43,7 @@ function ModalCard(): JSX.Element {
           }}
           container={() => rootRef.current}
         >
-          <CardServices />
+          <PricingTable />
         </Modal>
       </Box >
     </div >

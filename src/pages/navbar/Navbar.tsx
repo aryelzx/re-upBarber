@@ -8,7 +8,7 @@ import logomobile from '../../assets/img/backgroundsIcons/logomobile.png';
 import SwipeableTemporaryDrawer from '../../components/menu-lateral/MenuLateral';
 
 
-const navItems = ['home', 'servicos', 'agendamento', 'contato'];
+const navItems = ['home', 'serviços', 'portfólio', 'contato'];
 
 function Navbar() {
   const theme = useTheme();
